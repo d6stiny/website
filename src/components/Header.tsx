@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Nav } from "./Nav";
 
 export default function Header() {
   return (
@@ -9,27 +9,10 @@ export default function Header() {
             <span className="font-mono font-bold pb-1">d6stiny.lol</span>
           </a>
         </h1>
-        <nav className="w-full text-right">
+        <nav className="w-full justify-end hidden sm:flex">
           <ul className="flex items-center gap-8">
             <div className="flex-grow gap-4 flex">
-              <span className="first:flex-grow w-min flex-shrink">
-                <Link
-                  href="/notes"
-                  className="no-underline hover:underline decoration-rose-100/80 decoration-wavy"
-                >
-                  notes
-                </Link>
-              </span>
-              <span className="first:flex-grow w-min flex-shrink">
-                <a className="no-underline hover:underline decoration-rose-100/80 decoration-wavy">
-                  projects
-                </a>
-              </span>
-              <span className="first:flex-grow w-min flex-shrink">
-                <a className="no-underline hover:underline decoration-rose-100/80 decoration-wavy">
-                  resume
-                </a>
-              </span>
+              <Nav />
             </div>
           </ul>
         </nav>
