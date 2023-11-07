@@ -3,11 +3,17 @@ import { allNotes } from "contentlayer/generated";
 import dayjs from "dayjs";
 
 export default function Notes() {
+  const notes = allNotes.sort((a, b) => {
+    if (a.date > b.date) return -1;
+    if (a.date < b.date) return 1;
+    return 0;
+  });
+
   return (
     <div className="prose prose-invert m-auto">
       <h1>Notes</h1>
       <ul>
-        {allNotes.map((note) => (
+        {notes.map((note) => (
           <Link
             key={note._id}
             href={note.url}
