@@ -2,9 +2,6 @@ export default function Home() {
   return (
     <div className="prose prose-invert m-auto mb-8">
       <h1 className="mb-0">d6stiny</h1>
-      <span>
-        <em>any/all</em>
-      </span>
       <p>
         Howdy! I am [redacted] (aka d6stiny), a self-taught developer. I love
         everything Apple, privacy & open-source software. I also like
