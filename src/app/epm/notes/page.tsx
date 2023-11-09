@@ -11,7 +11,7 @@ export default function Notes() {
 
   return (
     <div className="prose prose-invert m-auto">
-      <h1>Notes</h1>
+      <h1>Notas</h1>
       <ul>
         {notes.map((note) => (
           <Link

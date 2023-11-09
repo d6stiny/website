@@ -22,7 +22,7 @@ const Note = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: "string",
-      resolve: (doc) => `/notes/${doc._raw.flattenedPath}`,
+      resolve: (doc) => `/epm/notes/${doc._raw.flattenedPath}`,
     },
     slug: {
       type: "string",

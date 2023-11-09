@@ -12,7 +12,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "d6stiny.sh",
+  title: "d6stiny",
 };
 
 export default function RootLayout({
