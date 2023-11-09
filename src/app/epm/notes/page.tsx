@@ -17,14 +17,14 @@ export default function Notes() {
           <Link
             key={note._id}
             href={note.url}
-            className="block font-normal mb-6 mt-2 no-underline"
+            className="mb-6 mt-2 block font-normal no-underline"
           >
-            <li className="flex flex-col md:flex-row gap-2 md:items-center">
-              <span className="text-lg leading-5 flex gap-2 flex-wrap">
+            <li className="flex flex-col gap-2 md:flex-row md:items-center">
+              <span className="flex flex-wrap gap-2 text-lg leading-5">
                 {note.title}
               </span>
-              <div className="flex gap-2 items-center">
-                <span className="text-sm whitespace-nowrap">
+              <div className="flex items-center gap-2">
+                <span className="whitespace-nowrap text-sm">
                   {dayjs(note.date).format("DD/MM/YYYY")}
                 </span>
               </div>

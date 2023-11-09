@@ -15,7 +15,7 @@ export default function Home() {
         Best way to reach out to me is via Discord{" "}
         <span className="font-semibold">@d6stiny</span>.
       </p>
-      <p className="gap-3 flex-wrap flex">
+      <p className="flex flex-wrap gap-3">
         <a href="https://github.com/d6stiny">GitHub</a>
         <a href="https://instagram.com/d6stinylol">Instagram</a>
         <a href="https://www.twitch.tv/d6stinylol">Twitch</a>

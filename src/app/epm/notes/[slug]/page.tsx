@@ -19,7 +19,7 @@ export default function Note({ params }: Props) {
   const MDXContent = useMDXComponent(note.body.code);
 
   return (
-    <div className="lg:prose-xs container prose m-auto mb-20 max-w-4xl p-4 pt-14 prose-invert">
+    <div className="lg:prose-xs container prose prose-invert m-auto mb-20 max-w-4xl p-4 pt-14">
       <>
         <section className="-mx-8 flex flex-wrap gap-4 rounded-xl px-8">
           <div className="w-full grow">

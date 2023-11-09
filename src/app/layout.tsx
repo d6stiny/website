@@ -25,9 +25,9 @@ export default function RootLayout({
       <body
         className={`${quicksand.className} ${jetBrainsMono.variable} h-screen bg-black text-white`}
       >
-        <div className="max-w-[80ch] mr-auto ml-auto p-2 scroll-smooth relative">
+        <div className="relative ml-auto mr-auto max-w-[80ch] scroll-smooth p-2">
           <Header />
-          <main className="px-7 py-10 overflow-x-hidden">{children}</main>
+          <main className="overflow-x-hidden px-7 py-10">{children}</main>
         </div>
       </body>
     </html>

@@ -26,14 +26,14 @@ import { Button } from "./Button";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center pt-5 pb-2 mb-6 transition duration-300 ease-out border-b">
+    <header className="mb-6 flex items-center justify-between border-b pb-2 pt-5 transition duration-300 ease-out">
       <a className="w-[220px]" href="/">
-        <span className="font-mono font-bold pb-1">d6stiny.lol</span>
+        <span className="pb-1 font-mono font-bold">d6stiny.lol</span>
       </a>
 
-      <nav className="w-full justify-end hidden sm:flex">
+      <nav className="hidden w-full justify-end sm:flex">
         <ul className="flex items-center gap-8">
-          <div className="flex-grow gap-4 flex">
+          <div className="flex flex-grow gap-4">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -134,7 +134,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            className,
           )}
           {...props}
         >
