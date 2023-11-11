@@ -12,7 +12,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "./NavigationMenu";
 import {
   Sheet,
@@ -22,7 +21,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./Sheet";
-import { Button } from "./Button";
+import { Button, buttonVariants } from "./Button";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./Accordion";
 
 export default function Header() {
   return (
@@ -100,22 +105,55 @@ export function MobileHeader() {
       <SheetTrigger asChild>
         <Button
           variant={"ghost"}
-          className="block hover:bg-transparent sm:hidden"
+          className="nav:hidden block p-2 hover:bg-transparent sm:hidden"
         >
           <Menu className="h-5 w-5" />
         </Button>
       </SheetTrigger>
       <SheetContent side={"top"}>
         <SheetHeader>
-          <SheetTitle>d6stiny.lol</SheetTitle>
-          <SheetDescription className="flex flex-col divide-y text-start">
+          <SheetTitle className="flex items-center">
             <Link
-              href="/projects"
-              onClick={() => setIsOpen(!open)}
+              className={buttonVariants({
+                variant: "link",
+                className: "-mx-2 -mt-2 w-fit !p-2",
+              })}
+              href={"/"}
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              d6stiny.lol
+            </Link>
+          </SheetTitle>
+          <SheetDescription className="flex flex-col divide-y text-start">
+            {/* <Link
+              href="#"
+              onClick={() => setIsOpen(!isOpen)}
               className="flex items-center space-x-2 py-4 text-foreground/60 transition-colors hover:text-foreground/80"
             >
-              Projects
-            </Link>
+              yes
+            </Link> */}
+
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>EPM</AccordionTrigger>
+                <AccordionContent onClick={() => setIsOpen(!isOpen)}>
+                  <div className="flex flex-col gap-2">
+                    <Link className="py-4" href="/epm/notes">
+                      Notas
+                    </Link>
+                    <Link className="py-4" href="/epm/ref">
+                      TGPSI Ref
+                    </Link>
+                    <Link className="py-4" href="/epm/internship">
+                      Estágio
+                    </Link>
+                    <Link className="py-4" href="/epm/pap">
+                      PAP
+                    </Link>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </SheetDescription>
         </SheetHeader>
       </SheetContent>
