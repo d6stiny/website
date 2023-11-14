@@ -41,7 +41,7 @@ const interests: string[] = [
 
 export default function Home() {
   return (
-    <div className="prose-xl prose-invert mx-auto px-8 lg:px-0">
+    <div className="prose-base prose-invert mx-auto px-8 lg:px-0">
       <Link className="no-underline hover:underline" href="/">
         <h1>d6stiny</h1>
       </Link>
