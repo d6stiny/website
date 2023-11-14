@@ -12,6 +12,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
 } from "./NavigationMenu";
 import {
   Sheet,
@@ -28,6 +29,29 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "./Accordion";
+
+const epmLinks: { title: string; href: string; description: string }[] = [
+  {
+    title: "Notas",
+    href: "/epm/notes",
+    description: "Notas que tirei de tópicos técnicos abordados na escola.",
+  },
+  {
+    title: "TGPSI Ref",
+    href: "/epm/ref",
+    description: "Referêncial do curso que frequentei (TGPSI).",
+  },
+  {
+    title: "Estágio",
+    href: "/epm/internship",
+    description: "Plano de estágio + O meu relatório de estágio.",
+  },
+  {
+    title: "PAP",
+    href: "/epm/pap",
+    description: "A minha prova de aptidão profissional (PAP).",
+  },
+];
 
 export default function Header() {
   return (
@@ -61,20 +85,28 @@ export default function Header() {
                           </a>
                         </NavigationMenuLink>
                       </li>
-                      <ListItem href="/epm/notes" title="Notas">
-                        Notas que tirei de tópicos técnicos abordados na escola.
-                      </ListItem>
-                      <ListItem href="/epm/ref" title="TGPSI Ref">
-                        Referêncial do curso que frequentei (TGPSI).
-                      </ListItem>
-                      <ListItem href="/epm/internship" title="Estágio">
-                        Plano de estágio + O meu relatório de estágio.
-                      </ListItem>
-                      <ListItem href="/epm/pap" title="PAP">
-                        A minha prova de aptidão profissional (PAP).
-                      </ListItem>
+
+                      {epmLinks.map((link) => (
+                        <ListItem
+                          key={link.title}
+                          href={link.href}
+                          title={link.title}
+                        >
+                          {link.description}
+                        </ListItem>
+                      ))}
                     </ul>
                   </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <Link href="/curriculum" legacyBehavior passHref>
+                    <NavigationMenuLink
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      Curriculum
+                    </NavigationMenuLink>
+                  </Link>
                 </NavigationMenuItem>
 
                 {/* <NavigationMenuItem>
@@ -125,31 +157,24 @@ export function MobileHeader() {
             </Link>
           </SheetTitle>
           <SheetDescription className="flex flex-col divide-y text-start">
-            {/* <Link
-              href="#"
+            <Link
+              href="/curriculum"
               onClick={() => setIsOpen(!isOpen)}
               className="flex items-center space-x-2 py-4 text-foreground/60 transition-colors hover:text-foreground/80"
             >
-              yes
-            </Link> */}
+              Curriculum
+            </Link>
 
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger>EPM</AccordionTrigger>
                 <AccordionContent onClick={() => setIsOpen(!isOpen)}>
                   <div className="flex flex-col gap-2">
-                    <Link className="py-4" href="/epm/notes">
-                      Notas
-                    </Link>
-                    <Link className="py-4" href="/epm/ref">
-                      TGPSI Ref
-                    </Link>
-                    <Link className="py-4" href="/epm/internship">
-                      Estágio
-                    </Link>
-                    <Link className="py-4" href="/epm/pap">
-                      PAP
-                    </Link>
+                    {epmLinks.map((link) => (
+                      <Link key={link.title} className="py-4" href={link.href}>
+                        {link.title}
+                      </Link>
+                    ))}
                   </div>
                 </AccordionContent>
               </AccordionItem>
