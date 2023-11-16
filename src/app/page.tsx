@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="prose prose-invert m-auto mb-8">
@@ -16,9 +18,15 @@ export default function Home() {
         <span className="font-semibold">@d6stiny</span>.
       </p>
       <p className="flex flex-wrap gap-3">
-        <a href="https://github.com/d6stiny">GitHub</a>
-        <a href="https://instagram.com/d6stinylol">Instagram</a>
-        <a href="https://www.twitch.tv/d6stinylol">Twitch</a>
+        <Link href="https://github.com/d6stiny" target="_blank">
+          GitHub
+        </Link>
+        <Link href="https://instagram.com/d6stinylol" target="_blank">
+          Instagram
+        </Link>
+        <Link href="https://www.twitch.tv/d6stinylol" target="_blank">
+          Twitch
+        </Link>
       </p>
     </div>
   );
