@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default async function PAP() {
   return (
     <div className="prose prose-invert m-auto mb-8">
