@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="prose prose-invert m-auto mb-8">
       <h1 className="mb-0">d6stiny</h1>

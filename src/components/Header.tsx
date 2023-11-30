@@ -148,7 +148,7 @@ export function MobileHeader() {
             <Link
               className={buttonVariants({
                 variant: "link",
-                className: "-mx-2 -mt-2 w-fit !p-2",
+                className: "mx-2 -mt-2 w-fit !p-2",
               })}
               href={"/"}
               onClick={() => setIsOpen(!isOpen)}

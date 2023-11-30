@@ -32,7 +32,7 @@ export default function Projects() {
             <Link
               href={project.href || ""}
               key={project.name}
-              className="mt-2 rounded-lg p-3 px-5 text-left transition hover:-translate-y-1 hover:scale-105 hover:bg-muted"
+              className="mt-2 rounded-lg p-3 px-5 text-left ring-1 ring-white/10 transition hover:-translate-y-1 hover:scale-105 hover:bg-muted"
             >
               <div>
                 <h3 className="font-bold">{project.name}</h3>
