@@ -100,21 +100,11 @@ export default function Header() {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link href="/curriculum" legacyBehavior passHref>
+                  <Link href="https://cv.d6stiny.lol" legacyBehavior passHref>
                     <NavigationMenuLink
                       className={navigationMenuTriggerStyle()}
                     >
-                      Curriculum
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <Link href="/projects" legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      Projects
+                      Resume
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
@@ -158,19 +148,11 @@ export function MobileHeader() {
           </SheetTitle>
           <SheetDescription className="flex flex-col divide-y text-start">
             <Link
-              href="/curriculum"
+              href="https://cv.d6stiny.lol"
               onClick={() => setIsOpen(!isOpen)}
               className="flex items-center space-x-2 py-4 text-foreground/60 transition-colors hover:text-foreground/80"
             >
-              Curriculum
-            </Link>
-
-            <Link
-              href="/projects"
-              onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center space-x-2 py-4 text-foreground/60 transition-colors hover:text-foreground/80"
-            >
-              Projects
+              Resume
             </Link>
 
             <Accordion type="single" collapsible>
