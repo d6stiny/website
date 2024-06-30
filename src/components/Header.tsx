@@ -57,7 +57,7 @@ export default function Header() {
 	return (
 		<header className="mb-6 flex items-center justify-between border-b pb-2 pt-5 transition duration-300 ease-out">
 			<a className="w-[220px]" href="/">
-				<span className="pb-1 font-mono font-bold">d6stiny.lol</span>
+				<span className="pb-1 font-mono font-bold">d6stiny.uk</span>
 			</a>
 
 			<nav className="hidden w-full justify-end sm:flex">
@@ -100,7 +100,7 @@ export default function Header() {
 								</NavigationMenuItem>
 
 								<NavigationMenuItem>
-									<Link href="https://cv.d6stiny.lol" legacyBehavior passHref>
+									<Link href="https://cv.d6stiny.uk" legacyBehavior passHref>
 										<NavigationMenuLink
 											className={navigationMenuTriggerStyle()}
 										>
@@ -143,7 +143,7 @@ export function MobileHeader() {
 							href={"/"}
 							onClick={() => setIsOpen(!isOpen)}
 						>
-							d6stiny.lol
+							d6stiny.uk
 						</Link>
 					</SheetTitle>
 					<SheetDescription className="flex flex-col divide-y text-start">
