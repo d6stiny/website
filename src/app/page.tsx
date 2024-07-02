@@ -3,9 +3,9 @@ import Link from "next/link";
 export default async function Home() {
   return (
     <div className="prose prose-invert m-auto mb-8">
-      <h1 className="mb-0">d6stiny</h1>
+      <h1 className="mb-0">Diogo Castro</h1>
       <p>
-        Howdy! I am [redacted] (aka d6stiny), a self-taught developer. I love
+        Howdy! I am Diogo Castro (aka d6stiny), a self-taught developer. I love
         everything Apple, privacy & open-source software. I also like
         shitposting lol.
       </p>
